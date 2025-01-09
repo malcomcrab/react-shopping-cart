@@ -3,8 +3,11 @@ function Navbar(){
 
     return(
         <div className="navigation-container">
-            <button>Home</button>
-            <button>Shop</button>
+            
+            <a href="/">Home</a>
+            <br/>
+            <a href="shoppage">Shop</a>
+          
         </div>
     )
 }

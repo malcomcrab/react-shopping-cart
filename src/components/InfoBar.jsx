@@ -13,7 +13,7 @@ function InfoBar(){
             </div>
 
             <div className="contact-container">
-
+                
             </div>
 
             <div className="help-container">

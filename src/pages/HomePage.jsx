@@ -6,7 +6,13 @@ function HomePage(){
     return(
         <>
         <Header/>
+        <nav>
+        <ul>
+          
+        </ul>
+      </nav>
         <InfoBar/>
+
         </>
     )
 }
