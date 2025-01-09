@@ -1,12 +1,12 @@
 import SocialLinksBar from "./SocialLinksBar"
 
-function InfoBar(){
+function InfoBar({ className }){
 
 
 
     return(
 
-        <div className="info-container">
+        <div id={"infobar"} className={className}>
             
             <div className="address-container">
                 

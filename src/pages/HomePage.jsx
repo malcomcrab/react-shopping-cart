@@ -4,16 +4,12 @@ import InfoBar from "../components/InfoBar";
 function HomePage(){
 
     return(
-        <>
-        <Header/>
-        <nav>
-        <ul>
-          
-        </ul>
-      </nav>
-        <InfoBar/>
+        <div id="homepage-body">
+        <Header />
+        
+        <InfoBar />
 
-        </>
+        </div>
     )
 }
 

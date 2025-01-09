@@ -4,11 +4,12 @@ import InfoBar from "../components/InfoBar"
 function ShopPage(){
 
     return(
-        <>
-            <Header />
+        <div id="homepage-body">
+        <Header />
+        
+        <InfoBar />
 
-            <InfoBar />
-        </>
+        </div>
     )
 
 

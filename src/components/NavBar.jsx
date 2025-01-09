@@ -1,13 +1,16 @@
 
-function Navbar(){
+function Navbar({ className }){
 
-    return(
-        <div className="navigation-container">
+    return (
+        <div className={className}>
+            
             
             <a href="/">Home</a>
-            <br/>
+   
             <a href="shoppage">Shop</a>
-          
+      
+    
+            
         </div>
     )
 }

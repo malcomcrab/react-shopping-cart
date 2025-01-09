@@ -1,5 +1,5 @@
 import Navbar from "./NavBar";
-
+import styles from "../css-modules/Header.module.css"
 function Header(){
 
 
@@ -7,19 +7,24 @@ function Header(){
 
     return(
 
-    <div className="header-container">
+    <div id="header" className={styles.header}>
 
-        <div className="banner-advert">
+        <div className={styles.advert}>
             <p>I'm an advert</p>
         </div>
 
-        <div className="title-container">
+        <div className={styles.links}>
+            <p>links</p>
+            <p>links</p>
+        </div>
+
+        <div className={styles.title}>
             <h1 id="main-title">
                 The Clothing Store
             </h1>
         </div>
         
-        <Navbar/>
+        <Navbar className={styles.navbar}/>
 
     </div>
 
