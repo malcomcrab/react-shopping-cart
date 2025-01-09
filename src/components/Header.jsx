@@ -3,8 +3,6 @@ import styles from "../css-modules/Header.module.css"
 function Header(){
 
 
-
-
     return(
 
     <div id="header" className={styles.header}>
