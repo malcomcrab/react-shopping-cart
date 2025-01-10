@@ -1,16 +1,14 @@
 import Header from "../components/Header";
 import InfoBar from "../components/InfoBar";
 
-function HomePage(){
+function HomePage() {
+  return (
+    <div id="homepage-body">
+      <Header />
 
-    return(
-        <div id="homepage-body">
-        <Header />
-        
-        <InfoBar />
-
-        </div>
-    )
+      <InfoBar />
+    </div>
+  );
 }
 
 export default HomePage;

@@ -1,7 +1,4 @@
-
-
 Home Page contents:
-
 
     Top:
         -Sales banner. (Started)
@@ -29,13 +26,11 @@ Home Page contents:
             -Year
             -Company name
 
-
 Store Page:
 
-
-    Header: 
+    Header:
         -Reuse Homepage Header
-    
+
     Main:
         -Shop Products Display
             -Cards: (Stared)
@@ -45,14 +40,14 @@ Store Page:
                 -Description (Functional, needs styling)
                 -Number to add to basket
                 -Add to basket button
-            -Bonus (buttons to choose item category e.g 'tops, shorts') 
-        
+            -Bonus (buttons to choose item category e.g 'tops, shorts')
+
     Basic Basket Display
             -Tally of items
             -Total fee
             -Checkout button
             -Clear button
-    
+
     Info:
         -Reuse from homepage
 
@@ -60,13 +55,11 @@ Store Page:
     Footer:
         -Reuse from homepage
 
-
-
 Checkout (Page or Slide in window?):
 
     Header:
         Reuse component
-        
+
     Main:
         Shopping basket:
             -List of items

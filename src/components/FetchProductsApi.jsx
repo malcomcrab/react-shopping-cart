@@ -1,15 +1,13 @@
 import { useState, useEffect } from "react";
 import ProductDisplayTemplate from "./ProductDisplayTemplate";
 
-const FetchProductsApi = () => {
+const FetchProductsApi = ({ productsApiData, setProductsApiData }) => {
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-const [productsApiData, setProductsApiData] = useState([])
-const [error, setError] = useState(null);
-const [loading, setLoading] = useState(true);
-
-useEffect(() => {
+  useEffect(() => {
     fetch("https://fakestoreapi.com/products", { mode: "cors" })
-    .then((response) => {
+      .then((response) => {
         if (response.status >= 400) {
           throw new Error("server error");
         }
@@ -25,11 +23,14 @@ useEffect(() => {
 
   return (
     <>
-      {productsApiData && productsApiData.map((item) => {
-        return (<ProductDisplayTemplate key={item.title} productApiData={item}/>)
-      })}
+      {productsApiData &&
+        productsApiData.map((item) => {
+          return (
+            <ProductDisplayTemplate key={item.title} productApiData={item} />
+          );
+        })}
     </>
   );
 };
 
-export default FetchProductsApi
+export default FetchProductsApi;

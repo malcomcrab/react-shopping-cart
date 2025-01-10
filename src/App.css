@@ -1,33 +1,29 @@
-
-.product-display-card{
-
+.product-display-card {
 }
 
-#products-display{
+#products-display {
   display: grid;
   grid-row: 2;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
 
-#homepage-body{
+#homepage-body {
   display: grid;
   grid-template-rows: 2fr 6fr 3fr 1fr;
   height: 100svh;
 }
 
-h1{
+h1 {
   font-size: x-large;
 }
 
-#header{
+#header {
   grid-row: 1;
 }
 
-#infobar{
-  grid-row:3;
-  display:flex;
+#infobar {
+  grid-row: 3;
+  display: flex;
   flex-direction: row;
 }
-
-

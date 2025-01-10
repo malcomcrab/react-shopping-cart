@@ -1,18 +1,11 @@
+function Navbar({ className }) {
+  return (
+    <div className={className}>
+      <a href="/">Home</a>
 
-function Navbar({ className }){
-
-    return (
-        <div className={className}>
-            
-            
-            <a href="/">Home</a>
-   
-            <a href="shoppage">Shop</a>
-      
-    
-            
-        </div>
-    )
+      <a href="shoppage">Shop</a>
+    </div>
+  );
 }
 
 export default Navbar;
