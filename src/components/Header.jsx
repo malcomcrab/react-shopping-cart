@@ -1,6 +1,6 @@
 import Navbar from "./NavBar";
 import styles from "../css-modules/Header.module.css";
-function Header() {
+function Header({ basketItems }) {
   return (
     <div id="header" className={styles.header}>
       <div className={styles.advert}>
@@ -8,7 +8,7 @@ function Header() {
       </div>
 
       <div className={styles.links}>
-        <p>links</p>
+        <p>Basket: {basketItems.length}</p>
         <p>links</p>
       </div>
 

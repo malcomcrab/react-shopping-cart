@@ -17,7 +17,7 @@ function ShopPage(){
 
     return(
         <div id="homepage-body">
-        <Header />
+        <Header basketItems={basketItems}/>
         <ProductsDisplay 
             productsApiData={productsApiData} 
             setProductsApiData={setProductsApiData}

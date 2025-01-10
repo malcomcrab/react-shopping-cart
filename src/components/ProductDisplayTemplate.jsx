@@ -7,26 +7,21 @@ import { PureComponent } from "react";
 function ProductDisplayTemplate({ productApiData, basketItems, setBasketItems}) {
 
 
-   const [inc, setInc] = ("")
+   const [totalProduct, setTotalProduct] = useState("")
 
-    const updateNumber = (event) => {
-      const t = event.target.value
-      setInc(t)
-    }
-
-    const handleAddToBasketClick = (event) => {
-      const newData = event.target.value
+    const handleAddToBasketClick = ({event}) => {
       return setBasketItems((basket) => [...basket, productApiData])
       
     }
-    console.log(basketItems)
+
   return (
     <div className="product-display-card">
       <img height="auto" width="200" src={productApiData.image} />
       <h5>{productApiData.title}</h5>
       <p>{productApiData.price}</p>
-      <input name={'add-t otal'} type="number" onChange={updateNumber} value={inc} ></input>
-      <button onClick={handleAddToBasketClick} value={productApiData}
+      <input name={'add-total'} type="number" onChange={(e)=> setTotalProduct(e.target.value)}
+value={inc} ></input>
+      <button onClick={handleAddToBasketClick} value={totalProduct}
        >Add To Basket</button>
     </div>
   );
