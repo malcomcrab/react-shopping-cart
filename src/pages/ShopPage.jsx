@@ -5,12 +5,15 @@ import ProductsDisplay from "../components/ProductsDisplay"
 import { useState } from "react"
 
 
-  
 
 function ShopPage(){
 
     const [basketItems, setBasketItems] = useState([])
     const [productsApiData, setProductsApiData] = useState([])
+
+
+  
+
 
     return(
         <div id="homepage-body">

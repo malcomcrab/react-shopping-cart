@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ProductDisplayTemplate from "./ProductDisplayTemplate";
 
-const FetchProductsApi = ({ productsApiData, setProductsApiData }) => {
+const FetchProductsApi = ({ productsApiData, setProductsApiData, basketItems, setBasketItems }) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +26,11 @@ const FetchProductsApi = ({ productsApiData, setProductsApiData }) => {
       {productsApiData &&
         productsApiData.map((item) => {
           return (
-            <ProductDisplayTemplate key={item.title} productApiData={item} />
+            <ProductDisplayTemplate 
+              key={item.title} 
+              productApiData={item} 
+              basketItems={basketItems} 
+              setBasketItems={setBasketItems} />
           );
         })}
     </>
