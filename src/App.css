@@ -1,4 +1,15 @@
 
+.product-display-card{
+
+}
+
+#products-display{
+  display: grid;
+  grid-row: 2;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
 #homepage-body{
   display: grid;
   grid-template-rows: 2fr 6fr 3fr 1fr;
@@ -18,4 +29,5 @@ h1{
   display:flex;
   flex-direction: row;
 }
+
 

@@ -1,10 +1,13 @@
+import FetchProductsApi from "./FetchProductsApi";
+
 function ProductsDisplay(){
 
     return(
         <>
-
-            <div id="products-displa">
-                <p>products</p>
+            
+            <div id={"products-display"}>
+                
+                <FetchProductsApi />
             </div>
 
         </>
