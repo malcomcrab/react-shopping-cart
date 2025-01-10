@@ -4,16 +4,16 @@ Home Page contents:
 
 
     Top:
-        -Sales banner.
-        -Header (containing page title and navbar)
-        -NavBar
+        -Sales banner. (Started)
+        -Header (containing page title and navbar)(Started)
+        -NavBar (Functional needs styling)
 
 
     Main:
         -Main image (Slideshow?)
 
 
-    Info:
+    Info: (Started)
         -Company Address
         -Customer Help:
             -Phone
@@ -24,7 +24,7 @@ Home Page contents:
             -Clickable icons for social media accounts.
 
 
-    Footer:
+    Footer: (Started)
             -Copyright
             -Year
             -Company name
@@ -33,16 +33,16 @@ Home Page contents:
 Store Page:
 
 
-    Header:
+    Header: 
         -Reuse Homepage Header
     
     Main:
         -Shop Products Display
-            -Cards:
-                -Product image
-                -Title
-                -Price
-                -Description
+            -Cards: (Stared)
+                -Product image (Functional, needs styling)
+                -Title (Functional, needs styling)
+                -Price (Functional, needs styling)
+                -Description (Functional, needs styling)
                 -Number to add to basket
                 -Add to basket button
             -Bonus (buttons to choose item category e.g 'tops, shorts') 
@@ -65,7 +65,7 @@ Store Page:
 Checkout (Page or Slide in window?):
 
     Header:
-        Reuse compoenent
+        Reuse component
         
     Main:
         Shopping basket:
