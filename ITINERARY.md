@@ -38,14 +38,14 @@ Store Page:
                 -Title (Functional, needs styling)
                 -Price (Functional, needs styling)
                 -Description (Functional, needs styling)
-                -Number to add to basket
-                -Add to basket button
+                -Number to add to basket (Functional )
+                -Add to basket button (Functional)
             -Bonus (buttons to choose item category e.g 'tops, shorts')
 
     Basic Basket Display
-            -Tally of items
-            -Total fee
-            -Checkout button
+            -Tally of items (Functional)
+            -Total fee  (Functional)
+            -Checkout button 
             -Clear button
 
     Info:

@@ -19,11 +19,11 @@ function ProductDisplayTemplate({ productApiData, basketItems, setBasketItems}) 
     <div className="product-display-card">
       <img height="auto" width="200" src={productApiData.image} />
       <h5>{productApiData.title}</h5>
-      <p>{productApiData.price.toFixed(2)}</p>
+      <p>£{productApiData.price.toFixed(2)}</p>
       <input name={'add-total'} type="number" onChange={(e)=> setTotalProduct(e.target.value)}
 value={totalProduct} ></input>
       <button onClick={handleAddToBasketClick} value={totalProduct}
-       >Add To Basket</button>
+       >+</button>
     </div>
   );
 }

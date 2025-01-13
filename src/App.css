@@ -8,6 +8,16 @@
   grid-template-rows: 1fr 1fr;
 }
 
+.product-display-card{
+  display: flex;
+  border: solid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding:1em;
+}
+
 #homepage-body {
   display: grid;
   grid-template-rows: 2fr 6fr 3fr 1fr;
@@ -26,4 +36,13 @@ h1 {
   grid-row: 3;
   display: flex;
   flex-direction: row;
+}
+
+#checkout-basket-container{
+  position:fixed;
+  right:0;
+  z-index: 4;
+  background-color: wheat;
+  width:45%;
+  height:100%;
 }

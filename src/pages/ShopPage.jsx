@@ -3,6 +3,7 @@ import Header from "../components/Header"
 import InfoBar from "../components/InfoBar"
 import ProductsDisplay from "../components/ProductsDisplay"
 import { useState } from "react"
+import FullBasketDisplay from "../components/FullBasketDisplay"
 
 
 
@@ -33,6 +34,7 @@ function ShopPage(){
             basketItems={basketItems}
             setBasketItems={setBasketItems}
         />
+        <FullBasketDisplay />
         <InfoBar />
         </div>
     )
