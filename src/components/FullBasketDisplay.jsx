@@ -3,7 +3,7 @@
 
 Title
 Total Items in basket (display)
-List of items:
+List of items: (mapped through template component)
     -Title
     -Pic
     -Total Ordered
@@ -19,16 +19,27 @@ Clear all items button
 
 function FullBasketDisplay(){
 
+    const basketElement = document.querySelector('#checkout-basket-container')
+        
+
+    const handleHideBasket = () => {
+       basketElement.style.display = 'none' 
+    }
+
     return(
         <div id="checkout-basket-container">
             <div id="basket-header">
                 <h3>Shopping Cart:</h3>
-                <button>Hide Basket</button>
-                
+                <button onClick={handleHideBasket}>Hide Basket</button>
             </div>
+
             <p>Total items goes here:</p>
+            
             <p>Order List goes here:</p>
 
+            <div>
+                <p>Subtotal goes here:</p>
+            </div>
             <div id="basket-controls">
                 <button>Checkout</button>
                 <button>Clear All</button>
