@@ -1,6 +1,6 @@
 import Navbar from "./NavBar";
 import styles from "../css-modules/Header.module.css";
-
+import shopBasket from "../assets/svg-images/shopBasket.svg"
 
 function Header({ basketItems, basketSubtotal }) {
   
@@ -23,10 +23,14 @@ function Header({ basketItems, basketSubtotal }) {
       </div>
 
       <div className={styles.headerBasket}>
-        {basketItems && <p>Basket: {basketItems.length}</p>
+      <img height="30" src={shopBasket} onClick={handleDisplayBasket}/>
+        {basketItems && 
+          <>
+          
+          {/*<p>{basketItems.length}</p>*/}
+          </>
         }
-        {basketItems && <p>Total: £ {basketSubtotal.toFixed(2)} </p>}
-        <button onClick={handleDisplayBasket}>Checkout</button>
+        {basketItems && <p>£{basketSubtotal.toFixed(2)} </p>}
       </div>
 
       

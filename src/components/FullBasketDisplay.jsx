@@ -1,21 +1,7 @@
-import FullBasketProductTemplate from "./FullBasketProductsTemplate"
-/* 
+import FullBasketProductTemplate from "./FullBasketProductTemplate"
+import styles from "../css-modules/FullBasketDisplay.module.css"
+import hideWindow from "../assets/svg-images/hideWindow.svg"
 
-Title
-Total Items in basket (display)
-List of items: (mapped through template component)
-    -Title
-    -Pic
-    -Total Ordered
-    -Individual Price
-    -Update total to order (input + submit button)
-    -Delete total of item from basket
-Subtotal display
-Checkout button
-Clear all items button
-
-
-*/
 
 function FullBasketDisplay({ totalItems, basketItems, basketSubtotal }){
 
@@ -28,9 +14,9 @@ function FullBasketDisplay({ totalItems, basketItems, basketSubtotal }){
 
     return(
         <div id="checkout-basket-container">
-            <div id="basket-header">
+            <div className={styles.header}>
                 <h3>Shopping Cart:</h3>
-                <button onClick={handleHideBasket}>Hide Basket</button>
+                <img height="50" src={hideWindow} onClick={handleHideBasket}/>
             </div>
 
             <p>Total items goes here: {totalItems}</p>
