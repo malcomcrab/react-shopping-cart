@@ -36,6 +36,7 @@ function ShopPage(){
         />
         <FullBasketDisplay 
             basketItems={basketItems}
+            basketSubtotal={basketSubtotal}
             totalItems={basketItems.length}/>
         <InfoBar />
         </div>

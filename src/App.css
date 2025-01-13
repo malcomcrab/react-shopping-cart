@@ -48,3 +48,8 @@ h1 {
   width:45%;
   height:100%;
 }
+
+#basket-product-display{
+  height: inherit;
+  overflow: auto;
+}

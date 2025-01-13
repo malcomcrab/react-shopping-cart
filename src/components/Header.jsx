@@ -1,6 +1,15 @@
 import Navbar from "./NavBar";
 import styles from "../css-modules/Header.module.css";
+
+
 function Header({ basketItems, basketSubtotal }) {
+  
+  const basketElement = document.querySelector('#checkout-basket-container')
+
+  const handleDisplayBasket = () => {
+      basketElement.style.display = 'grid'
+  }
+
   return (
     <div id="header" className={styles.header}>
       <div className={styles.advert}>
@@ -17,7 +26,7 @@ function Header({ basketItems, basketSubtotal }) {
         {basketItems && <p>Basket: {basketItems.length}</p>
         }
         {basketItems && <p>Total: £ {basketSubtotal.toFixed(2)} </p>}
-        
+        <button onClick={handleDisplayBasket}>Checkout</button>
       </div>
 
       
