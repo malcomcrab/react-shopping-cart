@@ -10,14 +10,23 @@ function ShopPage(){
 
     const [basketItems, setBasketItems] = useState([])
     const [productsApiData, setProductsApiData] = useState([])
+    const [basketSubtotal, setBasketSubtotal] = useState(0)
 
-
-  
-
+    useEffect(() => {
+        let b = 0 
+        if(basketItems.length > 0){
+            b += basketItems.reduce((accum, item) => 
+                accum + item.price, 0)
+            setBasketSubtotal(basketSubtotal => b)
+        }
+           
+    }, [basketItems]);
 
     return(
         <div id="homepage-body">
-        <Header basketItems={basketItems}/>
+        <Header basketItems={basketItems}
+                basketSubtotal={basketSubtotal}
+        />
         <ProductsDisplay 
             productsApiData={productsApiData} 
             setProductsApiData={setProductsApiData}

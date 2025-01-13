@@ -1,6 +1,6 @@
 import Navbar from "./NavBar";
 import styles from "../css-modules/Header.module.css";
-function Header({ basketItems }) {
+function Header({ basketItems, basketSubtotal }) {
   return (
     <div id="header" className={styles.header}>
       <div className={styles.advert}>
@@ -8,7 +8,9 @@ function Header({ basketItems }) {
       </div>
 
       <div className={styles.links}>
-        <p>Basket: {basketItems.length}</p>
+        {basketItems && <p>Basket: {basketItems.length}</p>
+        }
+        {basketItems && <p>Total: £ {basketSubtotal.toFixed(2)} </p>}
         <p>links</p>
       </div>
 
