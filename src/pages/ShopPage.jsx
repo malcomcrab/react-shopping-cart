@@ -34,7 +34,9 @@ function ShopPage(){
             basketItems={basketItems}
             setBasketItems={setBasketItems}
         />
-        <FullBasketDisplay />
+        <FullBasketDisplay 
+            basketItems={basketItems}
+            totalItems={basketItems.length}/>
         <InfoBar />
         </div>
     )

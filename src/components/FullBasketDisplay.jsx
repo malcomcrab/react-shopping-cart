@@ -1,4 +1,4 @@
-
+import FullBasketProductTemplate from "./FullBasketProductsTemplate"
 /* 
 
 Title
@@ -17,7 +17,7 @@ Clear all items button
 
 */
 
-function FullBasketDisplay(){
+function FullBasketDisplay({ totalItems, basketItems }){
 
     const basketElement = document.querySelector('#checkout-basket-container')
         
@@ -33,9 +33,13 @@ function FullBasketDisplay(){
                 <button onClick={handleHideBasket}>Hide Basket</button>
             </div>
 
-            <p>Total items goes here:</p>
+            <p>Total items goes here: {totalItems}</p>
             
             <p>Order List goes here:</p>
+            
+            {basketItems && basketItems.map((item) => {
+                return <FullBasketProductTemplate productInfo={item}/>
+            })}
 
             <div>
                 <p>Subtotal goes here:</p>
