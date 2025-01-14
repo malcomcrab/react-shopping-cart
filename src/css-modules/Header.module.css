@@ -40,3 +40,8 @@
   grid-column: 1;
   padding: none;
 }
+
+#addTextOne{
+  display: block;
+}
+

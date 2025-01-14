@@ -1,6 +1,7 @@
 import Navbar from "./NavBar";
 import styles from "../css-modules/Header.module.css";
 import shopBasket from "../assets/svg-images/shopBasket.svg";
+import { useEffect } from "react";
 
 function Header({ basketItems, basketSubtotal }) {
   const basketElement = document.querySelector("#checkout-basket-container");
@@ -9,10 +10,38 @@ function Header({ basketItems, basketSubtotal }) {
     basketElement.style.display = "grid";
   };
 
+  const advertArray = [
+    'I am advert one',
+    'I am advert two',
+    'I am advert three'
+        
+  ]
+
+  
+
+  useEffect(() => {
+    const advertText = document.querySelector("#addText")
+    let i = 0
+    const key = setInterval(() => {
+      advertText.textContent = advertArray[i]
+      if(i > 1){
+        i = 0
+      } else {
+        i++
+      }
+    }, 5000);
+
+    return () => {
+      clearInterval(key);
+    };
+  }, [])
+
+
   return (
     <div id="header" className={styles.header}>
       <div className={styles.advert}>
-        <p>I'm an advert</p>
+        <p id='addText'>{advertArray[2]}</p>
+        
       </div>
 
       <Navbar className={styles.navbar} />
