@@ -16,8 +16,8 @@ function ProductDisplayTemplate({
 
   return (
     <div className="product-display-card">
-      <img height="auto" width="200" src={productApiData.image} />
       <h5>{productApiData.title}</h5>
+      <img height="auto" width="200" src={productApiData.image} />
       <p>£{productApiData.price.toFixed(2)}</p>
       <input
         name={"add-total"}

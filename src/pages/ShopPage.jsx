@@ -4,6 +4,7 @@ import InfoBar from "../components/InfoBar";
 import ProductsDisplay from "../components/ProductsDisplay";
 import { useState } from "react";
 import FullBasketDisplay from "../components/FullBasketDisplay";
+import Footer from "../components/headerFooter/Footer"
 
 function ShopPage() {
   const [basketItems, setBasketItems] = useState([]);
@@ -41,6 +42,8 @@ function ShopPage() {
         setBasketItems={setBasketItems}
       />
       <InfoBar />
+
+      <Footer />
     </div>
   );
 }

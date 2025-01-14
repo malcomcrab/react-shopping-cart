@@ -1,3 +1,4 @@
+
 function Navbar({ className }) {
   return (
     <div className={className}>

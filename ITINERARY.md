@@ -1,27 +1,27 @@
 Home Page contents:
 
     Top:
-        -Sales banner. (Started)
-        -Header (containing page title and navbar)(Started)
+        -Sales banner. (Functional needs styling)
+        -Header (containing page title and navbar)(Functional needs styling)
         -NavBar (Functional needs styling)
 
 
     Main:
-        -Main image (Slideshow?)
+        -Main image (Functional needs styling)
+            -Automatic slideshow of fashionable images 
 
-
-    Info: (Started)
+    Info: (Functional needs styling)
         -Company Address
         -Customer Help:
             -Phone
             -Email
             -Returns
             -Careers
-        -Social media links bar
+        -Social media links bar (Started...)
             -Clickable icons for social media accounts.
 
 
-    Footer: (Started)
+    Footer: (Functional needs styling)
             -Copyright
             -Year
             -Company name
@@ -33,20 +33,19 @@ Store Page:
 
     Main:
         -Shop Products Display
-            -Cards: (Stared)
-                -Product image (Functional, needs styling)
-                -Title (Functional, needs styling)
-                -Price (Functional, needs styling)
-                -Description (Functional, needs styling)
-                -Number to add to basket (Functional )
-                -Add to basket button (Functional)
+            -Cards: (Functional needs styling)
+                -Product image 
+                -Title 
+                -Price 
+                -Description 
+                -Number to add to basket 
+                -Add to basket button
             -Bonus (buttons to choose item category e.g 'tops, shorts')
 
-    Basic Basket Display
+    Basic Basket Display (Functional needs styling)
             -Tally of items (Functional)
             -Total fee  (Functional)
-            -Checkout button
-            -Clear button
+            -View basket button (Funcational)
 
     Info:
         -Reuse from homepage
@@ -55,26 +54,33 @@ Store Page:
     Footer:
         -Reuse from homepage
 
-Checkout (Page or Slide in window?):
+
+
+Checkout (Toggle display, slide in/out animation):
 
     Header:
         Reuse component
 
     Main:
-        Shopping basket:
-            -List of items
-                -Small image of product
-                -Item name
-                -Total number of item added to basket
+        Shopping basket: (Functional needs styling)
+            -List view of items
+                -Small image of product (done)
+                -Item name (done)
                 -Fine tune buttons (Add or remove single increments of the item in basket)
                 -Delete item button
-            -Number of items in basket
-            -Basket fee total
-            -Checkout button
-            -Clear basket button
+            -Number of items in basket (done)
+            -Basket fee total (done)
+            -Checkout button (Included but function no needed)
+            -Clear basket button (Done)
+
+            Bonus : 
+                -Total number of item added to basket
+                -Remove items incrementally
+
+            
 
     Info:
-        Reuse compoenent
+        Reuse component
 
     Footer:
-        Reuse compoenent
+        Reuse component

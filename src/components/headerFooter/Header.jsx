@@ -18,7 +18,7 @@ function Header({ basketItems, basketSubtotal }) {
   ]
 
   useEffect(() => {
-    const advertText = document.querySelector("#addText")
+    const advertText = document.querySelector("#adText")
     let i = 0
     const key = setInterval(() => {
       advertText.textContent = advertArray[i]
@@ -39,7 +39,7 @@ function Header({ basketItems, basketSubtotal }) {
     <div id="header" className={styles.header}>
       
       <div className={styles.advert}>
-        <p id='addText'>{advertArray[2]}</p>
+        <p id='adText' className={styles.adText}>{advertArray[2]}</p>
       </div>
 
       <div id={styles.headerMain}>

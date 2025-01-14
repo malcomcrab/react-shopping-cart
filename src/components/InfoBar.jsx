@@ -1,13 +1,14 @@
 import SocialLinksBar from "./SocialLinksBar";
+import styles from "../css-modules/InfoBar.module.css"
 
 function InfoBar({ className }) {
   return (
-    <div id="infobar" className={className}>
+    <div id={styles.infoBar} >
       <div>
-        <h4>Clothing Brand Name</h4>
+        <h5>Clothing Brand Name</h5>
       </div>
 
-      <div className="address-container">
+      <div className={styles.addressDiv}>
         104 Toby Street
         <br />
         Spoketone, Kent
@@ -15,14 +16,14 @@ function InfoBar({ className }) {
         England
       </div>
 
-      <div className="contact-container">
+      <div className={styles.contactDiv}>
         <p>Email</p>
         <p>Phone</p>
         <p>Returns</p>
         <p>Sign Up</p>
       </div>
 
-      <div className="news-container">
+      <div className={styles.newsletterDiv}>
         <p>
           Subscribe to our newsletter to get updates on new products,
           <br />
@@ -30,7 +31,7 @@ function InfoBar({ className }) {
         </p>
       </div>
 
-      <SocialLinksBar />
+      <SocialLinksBar className={styles.socialLinks}/>
     </div>
   );
 }

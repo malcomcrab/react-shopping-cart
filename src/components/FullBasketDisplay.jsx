@@ -19,16 +19,15 @@ function FullBasketDisplay({
   };
 
   return (
-    <div id="checkout-basket-container">
+    <div id="checkout-basket-container" class={styles.checkoutContainer}>
       <div className={styles.header}>
-        <h3>Shopping Cart:</h3>
+        <h3>Shopping Cart: {totalItems}</h3>
         <img height="50" src={hideWindow} onClick={handleHideBasket} />
       </div>
 
-      <p>Total items goes here: {totalItems}</p>
+      <p>Your Basket:</p>
 
-      <div id="basket-product-display">
-        <p>Order List goes here:</p>
+      <div id="basket-product-display" className={styles.productsList}>
         {basketItems &&
           basketItems.map((item) => {
             return (
@@ -44,7 +43,7 @@ function FullBasketDisplay({
       <div>
         <p>Sub Total: {basketSubtotal.toFixed(2)}</p>
       </div>
-      <div id="basket-controls">
+      <div id="basket-controls" className={styles.basketButtons}>
         <button>Checkout</button>
         <button onClick={handleClearBasket}>Clear All</button>
       </div>

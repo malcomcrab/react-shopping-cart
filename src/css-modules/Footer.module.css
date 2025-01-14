@@ -1,0 +1,13 @@
+
+
+
+.footer{  
+    font-size: xx-small;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color:white;
+    background-color: black;
+    padding:0px;
+    height:fit-content;
+}

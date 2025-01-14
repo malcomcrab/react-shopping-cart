@@ -1,6 +1,6 @@
-function SocialLinksBar() {
+function SocialLinksBar({ className }){
   return (
-    <div className="socials-link-container">
+    <div className={className}>
       <button>Facebook</button>
       <button>Twitter</button>
       <button>YouTube</button>
