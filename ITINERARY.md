@@ -45,7 +45,7 @@ Store Page:
     Basic Basket Display
             -Tally of items (Functional)
             -Total fee  (Functional)
-            -Checkout button 
+            -Checkout button
             -Clear button
 
     Info:

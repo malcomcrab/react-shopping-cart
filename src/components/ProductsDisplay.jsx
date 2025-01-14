@@ -1,7 +1,12 @@
 import FetchProductsApi from "./FetchProductsApi";
 
-            
-            function ProductsDisplay({ productsApiData, setProductsApiData, handleAddToBasketClick, basketItems, setBasketItems }) {
+function ProductsDisplay({
+  productsApiData,
+  setProductsApiData,
+  handleAddToBasketClick,
+  basketItems,
+  setBasketItems,
+}) {
   return (
     <>
       <div id={"products-display"}>

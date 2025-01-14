@@ -1,11 +1,10 @@
-
-.product{
-    border:solid;
-    padding:1%;
+.product {
+  border: solid;
+  padding: 1%;
 }
 
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
