@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "../components/headerFooter/Header";
 import HomepageImageCarousel from "../components/HomepageImageCarousel";
 import InfoBar from "../components/InfoBar";
 

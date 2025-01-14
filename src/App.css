@@ -39,7 +39,7 @@ h1 {
 }
 
 #checkout-basket-container {
-  display: grid;
+  display: none;
   grid-template-rows: 2fr 1fr 6fr 1fr 2fr;
   position: fixed;
   right: 0;
