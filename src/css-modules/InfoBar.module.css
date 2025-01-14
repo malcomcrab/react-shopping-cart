@@ -6,6 +6,7 @@
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 2fr 1fr ;
     grid-row: 3;
+    padding:1em;
   }
 
   .addressDiv{

@@ -1,4 +1,6 @@
-
+body{
+  margin:0px;
+}
 
 #products-display {
   display: grid;

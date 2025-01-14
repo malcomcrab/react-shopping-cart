@@ -2,6 +2,8 @@ import Navbar from "../NavBar";
 import styles from "../../css-modules/Header.module.css";
 import shopBasket from "../../assets/svg-images/shopBasket.svg";
 import { useEffect } from "react";
+import PropTypes from "prop-types";
+
 
 function Header({ basketItems, basketSubtotal }) {
   const basketElement = document.querySelector("#checkout-basket-container");
@@ -59,6 +61,10 @@ function Header({ basketItems, basketSubtotal }) {
       
     </div>
   );
+}
+
+Header.PropTypes = {
+   basketItems: PropTypes.array.isRequired,
 }
 
 export default Header;
