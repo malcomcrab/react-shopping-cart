@@ -1,6 +1,5 @@
 import Navbar from "../NavBar";
 import styles from "../../css-modules/Header.module.css";
-import shopBasket from "../../assets/svg-images/shopBasket.svg";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 import ShoppingBasketIcon from "../ShoppingBasketIcon";
@@ -17,7 +16,6 @@ function Header({ basketItems, basketSubtotal }) {
     'I am advert one',
     'I am advert two',
     'I am advert three'
-        
   ]
 
   useEffect(() => {
@@ -25,13 +23,8 @@ function Header({ basketItems, basketSubtotal }) {
     let i = 0
     const key = setInterval(() => {
       advertText.textContent = advertArray[i]
-      if(i > 1){
-        i = 0
-      } else {
-        i++
-      }
+      i > 1 ? i = 0 : i++
     }, 5000);
-
     return () => {
       clearInterval(key);
     };
@@ -39,8 +32,8 @@ function Header({ basketItems, basketSubtotal }) {
 
 
   return (
-      <div role="headerContainer" id="header" name="header" className={styles.header}>
-      
+    <div role="headerContainer" id="header" name="header" className={styles.header}>
+
       <div className={styles.advert}>
         <p id='adText' className={styles.adText}>{advertArray[2]}</p>
       </div>
@@ -55,13 +48,14 @@ function Header({ basketItems, basketSubtotal }) {
         <ShoppingBasketIcon onClick={handleDisplayBasket} basketItems={basketItems} basketSubtotal={basketSubtotal} />
       </div>
 
-      
+
     </div>
   );
 }
 
 Header.propTypes = {
-   basketItems: PropTypes.array.isRequired,
+  basketItems: PropTypes.array.isRequired,
+  basketSubtotal: PropTypes.number.isRequired,
 }
 
 export default Header;
