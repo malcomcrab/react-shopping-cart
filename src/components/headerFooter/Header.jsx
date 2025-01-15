@@ -3,6 +3,7 @@ import styles from "../../css-modules/Header.module.css";
 import shopBasket from "../../assets/svg-images/shopBasket.svg";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
+import ShoppingBasketIcon from "../ShoppingBasketIcon";
 
 
 function Header({ basketItems, basketSubtotal }) {
@@ -38,7 +39,7 @@ function Header({ basketItems, basketSubtotal }) {
 
 
   return (
-    <div id="header" className={styles.header}>
+      <div role="headerContainer" id="header" name="header" className={styles.header}>
       
       <div className={styles.advert}>
         <p id='adText' className={styles.adText}>{advertArray[2]}</p>
@@ -51,11 +52,7 @@ function Header({ basketItems, basketSubtotal }) {
           <h1 id="main-title">The Clothing Store</h1>
         </div>
 
-        <div className={styles.headerBasket}>
-          <img height="30" src={shopBasket} onClick={handleDisplayBasket} />
-          {basketItems && <>{/*<p>{basketItems.length}</p>*/}</>}
-          {basketItems && <p>£{basketSubtotal.toFixed(2)} </p>}
-        </div>
+        <ShoppingBasketIcon onClick={handleDisplayBasket} basketItems={basketItems} basketSubtotal={basketSubtotal} />
       </div>
 
       
@@ -63,7 +60,7 @@ function Header({ basketItems, basketSubtotal }) {
   );
 }
 
-Header.PropTypes = {
+Header.propTypes = {
    basketItems: PropTypes.array.isRequired,
 }
 

@@ -2,7 +2,7 @@
 function Navbar({ className }) {
   return (
     <div className={className}>
-      <a href="/">Home</a>
+      <a id="hompage-link" name='homepage-link' href="/">Home</a>
 
       <a href="shoppage">Shop</a>
     </div>

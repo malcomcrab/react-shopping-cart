@@ -1,0 +1,9 @@
+.headerBasket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2;
+    grid-column: 3;
+    padding: none;
+  }
