@@ -30,7 +30,7 @@ describe("Basket display toggle", () => {
         expect(onClick).toHaveBeenCalled();
     })
 
-    it("Should not trigger an onClick function when clicked", async () => {
+    it("Should trigger an onClick function when not clicked", async () => {
         
         const onClick = vi.fn();
         const user = userEvent.setup()
@@ -41,7 +41,23 @@ describe("Basket display toggle", () => {
 
         expect(onClick).not.toHaveBeenCalled();
     })
+
+    it("Should display totals next to basket", async () => {
+        render(<ShoppingBasketIcon basketItems={[1,2,3]}basketSubtotal={12.50}/>)
+
+        const subtotalDisplay = screen.getByRole("basketSubtotal");
+
+
+        expect(subtotalDisplay.textContent).toBe('£12.50')
+    })
     
-    
+    it("Should not display totals to be 2 decimal places", async () => {
+        render(<ShoppingBasketIcon basketItems={[1,2,3]}basketSubtotal={12.5000}/>)
+
+        const subtotalDisplay = screen.getByRole("basketSubtotal");
+
+
+        expect(subtotalDisplay.textContent).toBe('£12.50')
+    })
     
 })

@@ -6,7 +6,7 @@ function ShoppingBasketIcon({ onClick, basketSubtotal, basketItems}){
     return(
         <div name="show basket icon" className={styles.headerBasket}>
                   <img alt="shopping basket icon" height="30" src={shopBasket} onClick={onClick} />
-                  {basketItems && <p>£{basketSubtotal.toFixed(2)} </p>}
+                  {basketItems && <p role="basketSubtotal">£{basketSubtotal.toFixed(2)}</p>}
                 </div>
     )
 }

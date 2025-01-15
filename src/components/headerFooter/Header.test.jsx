@@ -8,7 +8,7 @@ import Header from "./Header"
 
 
 describe("Basket display toggle", () => {
-    it("Should render the shopping basket icon", () => {
+    it("Should render the Header Component", () => {
         render(<Header />)
 
         const headerContainer = screen.getByRole("headerContainer");
