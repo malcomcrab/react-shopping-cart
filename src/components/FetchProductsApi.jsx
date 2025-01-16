@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ProductDisplayTemplate from "./ProductDisplayTemplate";
+import PropTypes from "prop-types";
 
 const FetchProductsApi = ({
   productsApiData,
@@ -42,5 +43,14 @@ const FetchProductsApi = ({
     </>
   );
 };
+
+FetchProductsApi.protoTypes = {
+
+  productsApiData: PropTypes.array,
+  setProductsApiData: PropTypes.func.isRequired,
+  basketItems: PropTypes.func.isRequired,
+  setBasketItems: PropTypes.array
+
+}
 
 export default FetchProductsApi;

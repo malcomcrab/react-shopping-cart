@@ -19,7 +19,7 @@ function FullBasketDisplay({
   };
 
   return (
-    <div id="checkout-basket-container" class={styles.checkoutContainer}>
+    <div id="checkout-basket-container" className={styles.checkoutContainer}>
       <div className={styles.header}>
         <h3>Shopping Cart: {totalItems}</h3>
         <img height="50" src={hideWindow} onClick={handleHideBasket} />

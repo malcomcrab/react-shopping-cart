@@ -54,8 +54,8 @@ function Header({ basketItems, basketSubtotal }) {
 }
 
 Header.propTypes = {
-  basketItems: PropTypes.array.isRequired,
-  basketSubtotal: PropTypes.number.isRequired,
+  basketItems: PropTypes.array,
+  basketSubtotal: PropTypes.number,
 }
 
 export default Header;
