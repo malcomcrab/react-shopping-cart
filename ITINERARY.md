@@ -8,7 +8,7 @@ Home Page contents:
 
     Main:
         -Main image (Functional needs styling)
-            -Automatic slideshow of fashionable images 
+            -Automatic slideshow of fashionable images
 
     Info: (Functional needs styling)
         -Company Address
@@ -34,11 +34,11 @@ Store Page:
     Main:
         -Shop Products Display
             -Cards: (Functional needs styling)
-                -Product image 
-                -Title 
-                -Price 
-                -Description 
-                -Number to add to basket 
+                -Product image
+                -Title
+                -Price
+                -Description
+                -Number to add to basket
                 -Add to basket button
             -Bonus (buttons to choose item category e.g 'tops, shorts')
 
@@ -53,8 +53,6 @@ Store Page:
 
     Footer:
         -Reuse from homepage
-
-
 
 Checkout (Toggle display, slide in/out animation):
 
@@ -73,11 +71,11 @@ Checkout (Toggle display, slide in/out animation):
             -Checkout button (Included but function no needed)
             -Clear basket button (Done)
 
-            Bonus : 
+            Bonus :
                 -Total number of item added to basket
                 -Remove items incrementally
 
-            
+
 
     Info:
         Reuse component

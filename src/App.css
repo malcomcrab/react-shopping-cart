@@ -1,7 +1,6 @@
-body{
+body {
   margin: 0em 1em 0em 1em;
 }
-
 
 #homepage-body {
   display: grid;
@@ -22,8 +21,6 @@ h1 {
 #header {
   grid-row: 1;
 }
-
-
 
 #checkout-basket-container {
   display: none;

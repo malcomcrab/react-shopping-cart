@@ -1,30 +1,24 @@
-import { vi, describe, it, expect } from 'vitest'
+import { vi, describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import NavBar from "./NavBar" 
+import NavBar from "./NavBar";
 
 describe("Homepage link", () => {
-    it("Should render the homepge link", () => {
-        render(<NavBar />)
+  it("Should render the homepge link", () => {
+    render(<NavBar />);
 
-        const homepageLink = screen.getByText("Home");
+    const homepageLink = screen.getByText("Home");
 
-        expect(homepageLink).toBeInTheDocument();
-    
-    })
-    
-})
+    expect(homepageLink).toBeInTheDocument();
+  });
+});
 
 describe("Shop page link", () => {
-    it("Should render the homepge link", () => {
-        render(<NavBar />)
+  it("Should render the homepge link", () => {
+    render(<NavBar />);
 
-        const homepageLink = screen.getByText("Shop");
+    const homepageLink = screen.getByText("Shop");
 
-        expect(homepageLink).toBeInTheDocument();
-    
-    })
-    
-})
-
-
+    expect(homepageLink).toBeInTheDocument();
+  });
+});

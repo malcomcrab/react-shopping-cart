@@ -22,7 +22,13 @@ function FullBasketDisplay({
     <div id="checkout-basket-container" className={styles.checkoutContainer}>
       <div className={styles.header}>
         <h3>Shopping Cart: {totalItems}</h3>
-        <img height="50" src={hideWindow} onClick={handleHideBasket} />
+        <img
+          alt="Shopping Basket Icon"
+          title="Shopping Basket Icon"
+          height="50"
+          src={hideWindow}
+          onClick={handleHideBasket}
+        />
       </div>
 
       <p>Your Basket:</p>
@@ -31,11 +37,12 @@ function FullBasketDisplay({
         {basketItems &&
           basketItems.map((item) => {
             return (
-              <FullBasketProductTemplate 
-                key={item.key} 
-                productInfo={item} 
-                basketItems={basketItems} 
-                setBasketItems={setBasketItems}/>
+              <FullBasketProductTemplate
+                key={item.key}
+                productInfo={item}
+                basketItems={basketItems}
+                setBasketItems={setBasketItems}
+              />
             );
           })}
       </div>

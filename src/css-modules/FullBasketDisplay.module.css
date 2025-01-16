@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  color:white;
+  color: white;
   background-color: rgb(117, 117, 117);
   flex-direction: row;
   justify-content: space-between;
@@ -8,16 +8,16 @@
   padding: 1em;
 }
 
-.checkoutContainer{
-  border:double;
-  padding:1em;
+.checkoutContainer {
+  border: double;
+  padding: 1em;
   background-color: white;
 }
 
-.productsList{
+.productsList {
   border: solid;
 }
 
-.basketButtons{
+.basketButtons {
   justify-self: end;
 }

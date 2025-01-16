@@ -1,13 +1,11 @@
-
-
-.productsDisplay{
-        display: grid;
-        grid-column: 1;
-        grid-row: 2;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        border-style:groove;
-        margin-top: 2em;
-        gap:1em;
-        padding:1em;
+.productsDisplay {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-style: groove;
+  margin-top: 2em;
+  gap: 1em;
+  padding: 1em;
 }

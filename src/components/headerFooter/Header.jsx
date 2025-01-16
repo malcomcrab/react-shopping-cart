@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import PropTypes from "prop-types";
 import ShoppingBasketIcon from "../ShoppingBasketIcon";
 
-
 function Header({ basketItems, basketSubtotal }) {
   const basketElement = document.querySelector("#checkout-basket-container");
 
@@ -13,29 +12,34 @@ function Header({ basketItems, basketSubtotal }) {
   };
 
   const advertArray = [
-    'I am advert one',
-    'I am advert two',
-    'I am advert three'
-  ]
+    "I am advert one",
+    "I am advert two",
+    "I am advert three",
+  ];
 
   useEffect(() => {
-    const advertText = document.querySelector("#adText")
-    let i = 0
+    const advertText = document.querySelector("#adText");
+    let i = 0;
     const key = setInterval(() => {
-      advertText.textContent = advertArray[i]
-      i > 1 ? i = 0 : i++
+      advertText.textContent = advertArray[i];
+      i > 1 ? (i = 0) : i++;
     }, 5000);
     return () => {
       clearInterval(key);
     };
-  }, [])
-
+  }, []);
 
   return (
-    <div role="headerContainer" id="header" name="header" className={styles.header}>
-
+    <div
+      role="headerContainer"
+      id="header"
+      name="header"
+      className={styles.header}
+    >
       <div className={styles.advert}>
-        <p id='adText' className={styles.adText}>{advertArray[2]}</p>
+        <p id="adText" className={styles.adText}>
+          {advertArray[2]}
+        </p>
       </div>
 
       <div id={styles.headerMain}>
@@ -45,10 +49,12 @@ function Header({ basketItems, basketSubtotal }) {
           <h1 id="main-title">The Clothing Store</h1>
         </div>
 
-        <ShoppingBasketIcon onClick={handleDisplayBasket} basketItems={basketItems} basketSubtotal={basketSubtotal} />
+        <ShoppingBasketIcon
+          onClick={handleDisplayBasket}
+          basketItems={basketItems}
+          basketSubtotal={basketSubtotal}
+        />
       </div>
-
-
     </div>
   );
 }
@@ -56,6 +62,6 @@ function Header({ basketItems, basketSubtotal }) {
 Header.propTypes = {
   basketItems: PropTypes.array,
   basketSubtotal: PropTypes.number,
-}
+};
 
 export default Header;

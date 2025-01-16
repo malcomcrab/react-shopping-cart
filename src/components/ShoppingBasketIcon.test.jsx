@@ -1,63 +1,74 @@
-import { vi, describe, it, expect } from 'vitest'
+import { vi, describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import ShoppingBasketIcon from "./ShoppingBasketIcon" 
-
-
-
+import ShoppingBasketIcon from "./ShoppingBasketIcon";
 
 describe("Basket display toggle", () => {
-    it("Should render the shopping basket icon", () => {
-        render(<ShoppingBasketIcon />)
+  it("Should render the shopping basket icon", () => {
+    render(<ShoppingBasketIcon />);
 
-        const basketIcon = screen.getByRole("img", {name: "shopping basket icon" });
+    const basketIcon = screen.getByRole("img", {
+      name: "shopping basket icon",
+    });
 
-        expect(basketIcon).toBeInTheDocument();
-    
-    })
-    
-    
-    it("Should trigger an onClick function when clicked", async () => {
-        
-        const onClick = vi.fn();
-        const user = userEvent.setup()
-        render(<ShoppingBasketIcon onClick={onClick} basketItems={[1,2,3]} basketSubtotal={2}/>)
+    expect(basketIcon).toBeInTheDocument();
+  });
 
-        const basketIcon = screen.getByRole("img", {name: "shopping basket icon" });
+  it("Should trigger an onClick function when clicked", async () => {
+    const onClick = vi.fn();
+    const user = userEvent.setup();
+    render(
+      <ShoppingBasketIcon
+        onClick={onClick}
+        basketItems={[1, 2, 3]}
+        basketSubtotal={2}
+      />,
+    );
 
-        await user.click(basketIcon);
+    const basketIcon = screen.getByRole("img", {
+      name: "shopping basket icon",
+    });
 
-        expect(onClick).toHaveBeenCalled();
-    })
+    await user.click(basketIcon);
 
-    it("Should trigger an onClick function when not clicked", async () => {
-        
-        const onClick = vi.fn();
-        const user = userEvent.setup()
-        render(<ShoppingBasketIcon onClick={onClick} basketItems={[1,2,3]} basketSubtotal={2}/>)
+    expect(onClick).toHaveBeenCalled();
+  });
 
-        const basketIcon = screen.getByRole("img", {name: "shopping basket icon" });
+  it("Should trigger an onClick function when not clicked", async () => {
+    const onClick = vi.fn();
+    const user = userEvent.setup();
+    render(
+      <ShoppingBasketIcon
+        onClick={onClick}
+        basketItems={[1, 2, 3]}
+        basketSubtotal={2}
+      />,
+    );
 
+    const basketIcon = screen.getByRole("img", {
+      name: "shopping basket icon",
+    });
 
-        expect(onClick).not.toHaveBeenCalled();
-    })
+    expect(onClick).not.toHaveBeenCalled();
+  });
 
-    it("Should display totals next to basket", async () => {
-        render(<ShoppingBasketIcon basketItems={[1,2,3]}basketSubtotal={12.50}/>)
+  it("Should display totals next to basket", async () => {
+    render(
+      <ShoppingBasketIcon basketItems={[1, 2, 3]} basketSubtotal={12.5} />,
+    );
 
-        const subtotalDisplay = screen.getByRole("basketSubtotal");
+    const subtotalDisplay = screen.getByRole("basketSubtotal");
 
+    expect(subtotalDisplay.textContent).toBe("£12.50");
+  });
 
-        expect(subtotalDisplay.textContent).toBe('£12.50')
-    })
-    
-    it("Should not display totals to be 2 decimal places", async () => {
-        render(<ShoppingBasketIcon basketItems={[1,2,3]}basketSubtotal={12.5000}/>)
+  it("Should not display totals to be 2 decimal places", async () => {
+    render(
+      <ShoppingBasketIcon basketItems={[1, 2, 3]} basketSubtotal={12.5} />,
+    );
 
-        const subtotalDisplay = screen.getByRole("basketSubtotal");
+    const subtotalDisplay = screen.getByRole("basketSubtotal");
 
-
-        expect(subtotalDisplay.textContent).toBe('£12.50')
-    })
-    
-})
+    expect(subtotalDisplay.textContent).toBe("£12.50");
+  });
+});

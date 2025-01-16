@@ -1,9 +1,9 @@
 import SocialLinksBar from "./SocialLinksBar";
-import styles from "../css-modules/InfoBar.module.css"
+import styles from "../css-modules/InfoBar.module.css";
 
 function InfoBar({ className }) {
   return (
-    <div id={styles.infoBar} >
+    <div id={styles.infoBar}>
       <div className={styles.titleContainer}>
         <h5 className={styles.infobarTitle}>Clothing Brand Name</h5>
       </div>
@@ -38,7 +38,7 @@ function InfoBar({ className }) {
         <button className={styles.newsletterButton}>Subscribe</button>
       </div>
 
-      <SocialLinksBar className={styles.socialLinks}/>
+      <SocialLinksBar className={styles.socialLinks} />
     </div>
   );
 }

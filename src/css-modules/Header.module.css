@@ -1,11 +1,11 @@
-div{
+div {
   padding: none;
 }
 
 .header {
   display: grid;
   grid-template-rows: 0.3fr 1fr;
-  border-bottom:solid;
+  border-bottom: solid;
 }
 
 .advert {
@@ -26,8 +26,6 @@ div{
   text-align: center;
 }
 
-
-
 .navbar {
   display: flex;
   flex-direction: row;
@@ -38,15 +36,14 @@ div{
   padding: none;
 }
 
-#addTextOne{
+#addTextOne {
   display: block;
 }
 
-#headerMain{
+#headerMain {
   background-color: rgb(236, 236, 236);
   display: grid;
   grid-column: 1/4;
   grid-template-columns: 1fr 4fr 1fr;
   margin: 0.5em 0px 0.5em 0px;
 }
-

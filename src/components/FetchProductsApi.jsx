@@ -24,8 +24,8 @@ const FetchProductsApi = ({
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>A network error was encountered</p>;
+  if (loading) return <p role="loadingMessage">Loading...</p>;
+  if (error) return <p role="networkErrorMessage">A network error was encountered</p>;
 
   return (
     <>
@@ -37,6 +37,7 @@ const FetchProductsApi = ({
               productApiData={item}
               basketItems={basketItems}
               setBasketItems={setBasketItems}
+              
             />
           );
         })}
@@ -45,12 +46,10 @@ const FetchProductsApi = ({
 };
 
 FetchProductsApi.protoTypes = {
-
   productsApiData: PropTypes.array,
   setProductsApiData: PropTypes.func.isRequired,
   basketItems: PropTypes.func.isRequired,
-  setBasketItems: PropTypes.array
-
-}
+  setBasketItems: PropTypes.array,
+};
 
 export default FetchProductsApi;

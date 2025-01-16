@@ -4,7 +4,7 @@ import InfoBar from "../components/InfoBar";
 import ProductsDisplay from "../components/ProductsDisplay";
 import { useState } from "react";
 import FullBasketDisplay from "../components/FullBasketDisplay";
-import Footer from "../components/headerFooter/Footer"
+import Footer from "../components/headerFooter/Footer";
 
 function ShopPage() {
   const [basketItems, setBasketItems] = useState([]);
@@ -13,14 +13,13 @@ function ShopPage() {
 
   useEffect(() => {
     let b = 0;
-    if(basketItems.length < 1){
-      setBasketSubtotal((basketSubtotal) => 0)
+    if (basketItems.length < 1) {
+      setBasketSubtotal((basketSubtotal) => 0);
     }
     if (basketItems.length > 0) {
       b += basketItems.reduce((accum, item) => accum + item.price, 0);
       setBasketSubtotal((basketSubtotal) => b);
     }
-    
   }, [basketItems]);
 
   const handleAddToBasketClick = (event) => {

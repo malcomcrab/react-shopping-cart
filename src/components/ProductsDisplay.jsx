@@ -1,5 +1,5 @@
 import FetchProductsApi from "./FetchProductsApi";
-import styles from "../css-modules/ProductsDisplay.module.css"
+import styles from "../css-modules/ProductsDisplay.module.css";
 
 function ProductsDisplay({
   productsApiData,

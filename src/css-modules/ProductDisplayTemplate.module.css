@@ -1,25 +1,24 @@
-
-.productContainer{
-    display: grid;
-    grid-template-rows: 70% 10% 10% 10%;
-    max-width: 250px;
-    justify-content: center;
-    text-align: center;
-    padding: 1em;
-    margin:0px;
-    box-shadow: 1px 1px 5px 1px;
+.productContainer {
+  display: grid;
+  grid-template-rows: 50% 20% 20% 10%;
+  max-width: 250px;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+  margin: 0px;
+  box-shadow: 1px 1px 5px 1px;
 }
 
-.addProductContainer{
-    display: flex;
-    flex-direction: row;
-    font-size: xx-small;
+.addProductContainer {
+  display: flex;
+  flex-direction: row;
+  font-size: xx-small;
 }
 
-.productTitle{
-    font-size: x-small;
+.productTitle {
+  font-size: x-small;
 }
 
-.productImage{
-    justify-self: center;
+.productImage {
+  justify-self: center;
 }
