@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../css-modules/ProductDisplayTemplate.module.css"
 
 function ProductDisplayTemplate({
   productApiData,
@@ -15,10 +16,12 @@ function ProductDisplayTemplate({
   };
 
   return (
-    <div className="product-display-card">
-      <h5>{productApiData.title}</h5>
+    <div className={styles.productContainer}>
+      
       <img height="auto" width="200" src={productApiData.image} />
+      <h5 className={styles.productTitle}>{productApiData.title}</h5>
       <p>£{productApiData.price.toFixed(2)}</p>
+      <div className={styles.addProductContainer}>
       <input
         name={"add-total"}
         type="number"
@@ -28,6 +31,7 @@ function ProductDisplayTemplate({
       <button onClick={handleAddToBasketClick} value={totalProduct}>
         +
       </button>
+      </div>
     </div>
   );
 }

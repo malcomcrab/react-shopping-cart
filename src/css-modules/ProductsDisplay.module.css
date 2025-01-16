@@ -1,0 +1,10 @@
+
+
+.productsDisplay{
+        display: grid;
+        grid-row: 2;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap:1em;
+        padding:2em;
+}

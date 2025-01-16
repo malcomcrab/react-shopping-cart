@@ -2,26 +2,15 @@ body{
   margin:0px;
 }
 
-#products-display {
-  display: grid;
-  grid-row: 2;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
+
 
 .product-display-card {
-  display: flex;
-  border: solid;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 1em;
+
 }
 
 #homepage-body {
   display: grid;
-  grid-template-rows: 2fr 6fr 3fr 1fr;
+  grid-template-rows: 2fr 6fr 2fr 1fr;
   height: 100svh;
 }
 
