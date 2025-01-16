@@ -5,6 +5,7 @@ div{
 .header {
   display: grid;
   grid-template-rows: 0.3fr 1fr;
+  border-bottom:solid;
 }
 
 .advert {

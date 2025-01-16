@@ -1,14 +1,15 @@
 body{
-  margin:0px;
+  margin: 0em 1em 0em 1em;
 }
 
-
-
-.product-display-card {
-
-}
 
 #homepage-body {
+  display: grid;
+  grid-template-rows: 2fr 6fr 2fr 1fr;
+  height: 100svh;
+}
+
+#shoppage-body {
   display: grid;
   grid-template-rows: 2fr 6fr 2fr 1fr;
   height: 100svh;

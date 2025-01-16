@@ -18,7 +18,7 @@ function ProductDisplayTemplate({
   return (
     <div className={styles.productContainer}>
       
-      <img height="auto" width="200" src={productApiData.image} />
+      <img className={styles.productImage} height="auto" width="200" src={productApiData.image} />
       <h5 className={styles.productTitle}>{productApiData.title}</h5>
       <p>£{productApiData.price.toFixed(2)}</p>
       <div className={styles.addProductContainer}>

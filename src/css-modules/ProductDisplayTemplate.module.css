@@ -19,3 +19,7 @@
 .productTitle{
     font-size: x-small;
 }
+
+.productImage{
+    justify-self: center;
+}

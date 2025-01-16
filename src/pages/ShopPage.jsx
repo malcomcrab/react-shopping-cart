@@ -31,7 +31,7 @@ function ShopPage() {
   };
 
   return (
-    <div id="homepage-body">
+    <div id="shoppage-body">
       <Header basketItems={basketItems} basketSubtotal={basketSubtotal} />
 
       <ProductsDisplay
