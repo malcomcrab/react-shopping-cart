@@ -1,5 +1,7 @@
-import FetchProductsApi from "./FetchProductsApi";
+import { useEffect, hooks } from "react";
 import styles from "../css-modules/ProductsDisplay.module.css";
+import ProductDisplayTemplate from "./ProductDisplayTemplate";
+import {useFetchApi} from "./useFetchApi";
 
 function ProductsDisplay({
   productsApiData,
@@ -8,15 +10,30 @@ function ProductsDisplay({
   basketItems,
   setBasketItems,
 }) {
+
+  const { loading, error, apiData } = useFetchApi(); 
+
+  useEffect(() => {   
+    setProductsApiData((productsApiData) => apiData)
+  }, [apiData]);
+
   return (
     <>
       <div id={"products-display"} className={styles.productsDisplay}>
-        <FetchProductsApi
-          productsApiData={productsApiData}
-          setProductsApiData={setProductsApiData}
-          basketItems={basketItems}
-          setBasketItems={setBasketItems}
-        />
+        {error && <div>{error}</div>}
+        {loading && <div>{loading}</div>}
+        {productsApiData &&
+                productsApiData.map((item) => {
+                  return (
+                    <ProductDisplayTemplate
+                      key={item.title}
+                      productApiData={item}
+                      basketItems={basketItems}
+                      setBasketItems={setBasketItems}
+                      
+                    />
+                  );
+                })}
       </div>
     </>
   );
