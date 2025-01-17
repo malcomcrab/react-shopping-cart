@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 import PropTypes from "prop-types";
 
-export const useFetchApi = () =>  {
+export const useFetchApi = (apiUrl) =>  {
 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -10,7 +10,7 @@ export const useFetchApi = () =>  {
 
   
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products", { mode: "cors" })
+    fetch(apiUrl, { mode: "cors" })
       .then((response) => {
         if (response.status >= 400) {
           throw new Error("server error");

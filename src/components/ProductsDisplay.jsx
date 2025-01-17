@@ -10,8 +10,8 @@ function ProductsDisplay({
   basketItems,
   setBasketItems,
 }) {
-
-  const { loading, error, apiData } = useFetchApi(); 
+  const productApiUrl = "https://fakestoreapi.com/products"
+  const { loading, error, apiData } = useFetchApi(productApiUrl); 
 
   useEffect(() => {   
     setProductsApiData((productsApiData) => apiData)
